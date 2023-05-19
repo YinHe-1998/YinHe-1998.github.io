@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>404 Page not found | Yin&#39;Blog</title>
+<title>shell | Yin&#39;Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="https://yinhe-1998.github.io/404.html">
+<link rel="canonical" href="https://yinhe-1998.github.io/tags/shell/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.7140587df96a2b1a49eb723fa7063dc0c641a6cb638f3140e8d3beb4deae4f5c.css" integrity="sha256-cUBYfflqKxpJ63I/pwY9wMZBpstjjzFA6NO&#43;tN6uT1w=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yinhe-1998.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yinhe-1998.github.io/favicon-16x16.png">
@@ -18,6 +18,7 @@
 <link rel="mask-icon" href="https://yinhe-1998.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://yinhe-1998.github.io/tags/shell/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -54,13 +55,13 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="404 Page not found" />
+</noscript><meta property="og:title" content="shell" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yinhe-1998.github.io/404.html" />
+<meta property="og:url" content="https://yinhe-1998.github.io/tags/shell/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
+<meta name="twitter:title" content="shell"/>
 <meta name="twitter:description" content=""/>
 
 </head>
@@ -128,8 +129,33 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<div class="not-found">404</div>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://yinhe-1998.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://yinhe-1998.github.io/tags/">Tags</a></div>
+  <h1>
+    shell
+    <a href="/tags/shell/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Convert Utf 8
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>##This is a Bash script used to convert all GBK-encoded text files in a specified folder and its subfolders to UTF-8 encoding.
+# Define a function for recursively processing files in a folder process_files() { local path=&#34;$1&#34; local file # Traverse files in the folder for file in &#34;$path&#34;/*.txt; do if [ -f &#34;$file&#34; ]; then # Check if the file encoding is UTF-8 encoding=$(file -b --mime-encoding &#34;$file&#34;) if [[ &#34;$encoding&#34; == &#34;utf-8&#34; ]]; then echo &#34;File &#39;$file&#39; is already in UTF-8 format, skipping conversion....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-05-20 05:20:58 +0800 CST'>May 20, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Yin He</footer>
+  <a class="entry-link" aria-label="post link to Convert Utf 8" href="https://yinhe-1998.github.io/posts/convert-utf-8/"></a>
+</article>
     </main>
     
 <footer class="footer">
