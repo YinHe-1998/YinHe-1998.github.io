@@ -167,14 +167,92 @@
                 </a>
             </li>
             <li>
-                <a href="https://yinhe-1998.github.io/" title="about">
-                    <span>about</span>
+                <a href="https://yinhe-1998.github.io/index.xml" title="">
+                    <span></span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
-<main class="main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll To Top Button</title>
+  <style>
+    #scroll-to-top {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, #eee 50%, #ccc 50%);
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    #scroll-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    #scroll-to-top svg {
+      display: block;
+      margin: auto;
+      width: 30px;
+      height: 30px;
+      fill: none;
+      stroke: #333;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="scroll-to-top">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2L12 22M2 12L12 2 22 12"></path>
+    </svg>
+  </div>
+
+  <script>
+    var scrollToTopBtn = document.querySelector("#scroll-to-top");
+    var fadeOutTimer = null;
+    var fadeOutDelay = 3000;
+
+    function showScrollToTopBtn() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var triggerHeight = Math.max(0.2 * window.innerHeight, 100);
+      if (scrollY > triggerHeight) {
+        scrollToTopBtn.classList.add("visible");
+        clearTimeout(fadeOutTimer);
+      } else {
+        scrollToTopBtn.classList.remove("visible");
+        fadeOutTimer = setTimeout(function () {
+          scrollToTopBtn.classList.add("fade-out");
+        }, fadeOutDelay);
+      }
+    }
+
+    window.addEventListener("scroll", showScrollToTopBtn);
+    window.addEventListener("resize", showScrollToTopBtn);
+
+    scrollToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+</body>
+</html>
+
+    <main class="main">
 
 <header class="page-header">
   <h1>
